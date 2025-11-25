@@ -1,94 +1,148 @@
+<!-- DEVELOPER: Adrian Hernandez, IS117-001, Fall 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Bootstrap Page</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous">
-    <link href="css/main.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiverse Comics — Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="site.css" rel="stylesheet">
 </head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-            <nav class="navbar navbar-expand-md
-                    justify-content-start
-                    bg-dark navbar-dark
-                    col-12">
+<body class="d-flex flex-column min-vh-100">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="src/logo.png" alt="Multiverse Comics logo" width="36" height="36" class="me-2">
+                Multiverse Comics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!-- Brand -->
-                <a class="navbar-brand" href="#">Logo</a>
-                <!-- Responsive Button for the smaller menu -->
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <!-- Links -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="dc.html" id="dcMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">DC</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dcMenu">
+                            <li><a class="dropdown-item" href="dc.html#characters">DC characters</a></li>
+                            <li><a class="dropdown-item" href="dc.html#teams">DC teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="marvel.html" id="marvelMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marvel</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="marvelMenu">
+                            <li><a class="dropdown-item" href="marvel.html#characters">Marvel characters</a></li>
+                            <li><a class="dropdown-item" href="marvel.html#teams">Marvel teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="hero text-center white">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Welcome to the Multiverse of Comics</h1>
+            <p class="lead mt-3">Dive into DC, Marvel, and indie legends. From origins to on-screen, explore stories across media.</p>
+        </div>
+    </section>
 
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop"
-                               data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Education
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Link 1</a>
-                                <a class="dropdown-item" href="#">Link 2</a>
-                                <a class="dropdown-item" href="#">Link 3</a>
-                                <a class="dropdown-item" href="#">Link 4</a>
-                            </div>
-                        </li>
-                    </ul>
+    <!-- Carousel -->
+    <section class="container my-5">
+        <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow">
+                <div class="carousel-item active">
+                    <img src="src/VS.jpg" class="d-block w-100" alt="Collage of comic media art">
+                    <div class="carousel-caption">
+                        <h5>Comic media art</h5><p>From panels to prints—iconic visuals.</p>
+                    </div>
                 </div>
-            </nav>
-        <div class="row">
-        <p class="col-1">Col 1</p>
-        <p class="col-1">Col 2</p>
-        <p class="col-1">Col 3</p>
-        <p class="col-1">Col 4</p>
-        <p class="col-1">Col 5</p>
-        <p class="col-1">Col 6</p>
-        <p class="col-1">Col 7</p>
-        <p class="col-1">Col 8</p>
-        <p class="col-1">Col 9</p>
-        <p class="col-1">Col 10</p>
-        <p class="col-1">Col 11</p>
-        <p class="col-1">Col 12</p>
+                <div class="carousel-item">
+                    <img src="src/dc_comic.jpg" class="d-block w-100" alt="DC comic layout montage">
+                    <div class="carousel-caption"><h5>DC comic layout</h5></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/marvel.png" class="d-block w-100" alt="Marvel comic layout montage">
+                    <div class="carousel-caption"><h5>Marvel comic layout</h5></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="src/sale_ad.png" class="d-block w-100" alt="Comics, movies, and TV show media selection">
+                    <div class="carousel-caption"><h5>Preferred media</h5><p>Comics, movies, and TV shows.</p></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+            </button>
         </div>
-    <div class="col-sm-4  text-center">
-        <h2>h2 Bootstrap heading (24px)</h2>
-        <h3>h2 Bootstrap heading (18px)</h3>
+    </section>
+
+
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Choose your adventure</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="src/DC_Comics_logo.png" class="card-img-top" alt="DC comics showcase cover collage">
+                    <div class="card-body">
+                        <h5 class="card-title">DC Comics</h5>
+                        <p class="card-text">Detective Comics media and character arcs spanning decades. Explore origins, storylines, and adaptations.</p>
+                        <a href="dc.html" class="btn btn-primary">Enter DC</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="src/marvel-comics-logo.png" class="card-img-top" alt="Marvel comics showcase cover collage">
+                    <div class="card-body">
+                        <h5 class="card-title">Marvel Comics</h5>
+                        <p class="card-text">From street-level heroes to cosmic sagas—media, timelines, and first appearances.</p>
+                        <a href="marvel.html" class="btn btn-danger">Enter Marvel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="src/Dark_Horse_Comics_logo.png" class="card-img-top" alt="Indie and Dark Horse comics selection">
+                    <div class="card-body">
+                        <h5 class="card-title">Dark Horse / Third party</h5>
+                        <p class="card-text">Discover indie and third-party gems. New voices, bold art, and fresh worlds.</p>
+                        <a href="thirdparty.html" class="btn btn-secondary">Explore Indies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Float example: image wrapped by text -->
+    <section class="container my-5">
+        <img src="src/featured_panel.jpg" class="float-md-start me-md-4 mb-3 w-50" alt="Featured comic panel close-up">
+        <h2>Spotlight: Blue Beetle Jaime Reyes</h2>
+        <p>Chapter 1 of Blue Beetle: Jaime Reyes introduces Jaime, a high school student from El Paso, as he grapples with the sudden appearance of a powerful alien scarab that grants him a symbiotic relationship and powers. The scarab, a piece of technology from the alien Reach, initially manifests a full-body armor on Jaime, granting him superhuman abilities, though the process is painful at first.</p>
+
+        <div class="clearfix"></div>
+    </section>
+</main>
+<footer class="footer-fixed bg-dark text-light py-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div class="small">Copyright © Adrian Hernandez, 11/25/2025</div>
+        <div>
+            <a href="terms.html" class="link-light me-3">Terms of Service</a>
+            <a href="privacy.html" class="link-light">Privacy Statement</a>
+        </div>
     </div>
-</div>
- <footer class="footer page-footer font-small ">
-     <div class="container">
-        <div class="row">
-            <span class="text-muted">&copy; Adrian Hernandez, 2025 |  Terms Of Use  |  Privacy Statement</span>
-        </div>
-     </div>
-  </footer>
-</div>
+</footer>
 
 
-    <!-- Javascript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous">
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
+

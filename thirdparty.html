@@ -1,0 +1,142 @@
+
+<!-- DEVELOPER: Adrian Hernandez, IS117-001, Fall 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Third Party Heroes – Multiverse Comics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="site.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="src/logo.png" alt="Multiverse Comics logo" width="36" height="36" class="me-2">
+                Multiverse Comics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="dc.html" id="dcMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">DC</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dcMenu">
+                            <li><a class="dropdown-item" href="dc.html#characters">DC characters</a></li>
+                            <li><a class="dropdown-item" href="dc.html#teams">DC teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="marvel.html" id="marvelMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marvel</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="marvelMenu">
+                            <li><a class="dropdown-item" href="marvel.html#characters">Marvel characters</a></li>
+                            <li><a class="dropdown-item" href="marvel.html#teams">Marvel teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="page-header bg-light border-bottom">
+    <div class="container py-4">
+        <h1 class="h2 mb-2">Third Party Heroes</h1>
+        <p>Beyond DC and Marvel lies a world of bold storytelling. These characters—from alien shapeshifters to chemical-powered kids—have carved their own legacy in animation and comics. Dive into their origins and media impact.</p>
+    </div>
+</section>
+
+<!-- Character Grid -->
+<section class="container my-5">
+    <div class="row g-4">
+        <!-- Ben 10 -->
+        <div class="col-sm-6 col-md-3">
+            <div class="card h-100">
+                <img src="src/ben10.png" class="card-img-top" alt="Ben 10 alien transformation">
+                <div class="card-body">
+                    <h5 class="card-title">Ben 10</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Omnitrix alien device</li>
+                        <li><strong>First show:</strong> Ben 10 (2005)</li>
+                        <li><strong>Creator:</strong> Man of Action</li>
+                        <li>A boy who discovers a watch that lets him transform into 10 different aliens, each with unique powers.</li>
+                    </ul>
+                    <a href="buy.html?character=ben10" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Generator Rex -->
+        <div class="col-sm-6 col-md-3">
+            <div class="card h-100">
+                <img src="src/generatorrex.png" class="card-img-top" alt="Generator Rex nanite powers">
+                <div class="card-body">
+                    <h5 class="card-title">Generator Rex</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Nanite mutation</li>
+                        <li><strong>First show:</strong> Generator Rex (2010)</li>
+                        <li><strong>Creator:</strong> Man of Action</li>
+                        <li>A teenager with the ability to grow machines from his body, fighting EVOs and uncovering his past.</li>
+                    </ul>
+                    <a href="buy.html?character=generatorrex" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Max Steel -->
+        <div class="col-sm-6 col-md-3">
+            <div class="card h-100">
+                <img src="src/Maxsteel.jpg" class="card-img-top" alt="Max Steel turbo energy">
+                <div class="card-body">
+                    <h5 class="card-title">Max Steel</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> TURBO energy fusion</li>
+                        <li><strong>First show:</strong> Max Steel (2000)</li>
+                        <li><strong>Creator:</strong> Mattel</li>
+                        <li>A teenager merges with an alien named Steel to become a high-tech superhero powered by TURBO energy.</li>
+                    </ul>
+                    <a href="buy.html?character=maxsteel" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Powerpuff Girls -->
+        <div class="col-sm-6 col-md-3">
+            <div class="card h-100">
+                <img src="src/powerpuffgirls.png" class="card-img-top" alt="Powerpuff Girls flying">
+                <div class="card-body">
+                    <h5 class="card-title">Powerpuff Girls</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Chemical X experiment</li>
+                        <li><strong>First show:</strong> Powerpuff Girls (1998)</li>
+                        <li><strong>Creator:</strong> Craig McCracken</li>
+                        <li>Three kindergarten-aged girls with superpowers protect Townsville from monsters, mad scientists, and Mojo Jojo.</li>
+                    </ul>
+                    <a href="buy.html?character=powerpuffgirls" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-fixed bg-dark text-light py-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div class="small">Copyright © Adrian Hernandez, 11/25/2025</div>
+        <div>
+            <a href="terms.html" class="link-light me-3">Terms of Service</a>
+            <a href="privacy.html" class="link-light">Privacy Statement</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!-- DEVELOPER: Adrian Hernandez, IS117-001, Fall 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiverse Comics — Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="site.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<div class="modal fade" id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-dark">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="characterModalLabel">Character Info</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Origin:</strong> <span id="charOrigin">Gotham City</span></p>
+                <p><strong>First Comic:</strong> <span id="charComic">Detective Comics #27</span></p>
+                <p><strong>Description:</strong> <span id="charDesc">A vigilante driven by justice and loss, Batman protects Gotham with intellect and fear.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function loadCharacterInfo(name, origin, comic, description) {
+        document.getElementById('characterModalLabel').textContent = name + ' Info';
+        document.getElementById('charOrigin').textContent = origin;
+        document.getElementById('charComic').textContent = comic;
+        document.getElementById('charDesc').textContent = description;
+    }
+</script>
+
+</body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="src/logo.png" alt="Multiverse Comics logo" width="40" height="40" class="me-2">
+                Multiverse Comics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="dc.html" id="dcMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">DC</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dcMenu">
+                            <li><a class="dropdown-item" href="dc.html#characters">DC characters</a></li>
+                            <li><a class="dropdown-item" href="dc.html#teams">DC teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="marvel.html" id="marvelMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marvel</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="marvelMenu">
+                            <li><a class="dropdown-item" href="marvel.html#characters">Marvel characters</a></li>
+                            <li><a class="dropdown-item" href="marvel.html#teams">Marvel teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex gap-2">
+        </div>
+        <div class="w-50">
+            <input type="search" class="form-control form-control-sm" placeholder="Search characters" aria-label="Search characters">
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/batman.png" class="card-img-top" alt="Batman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Batman</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Gotham City; vow after tragedy</li>
+                        <li><strong>First comic:</strong> Detective Comics #27</li>
+                        <li><strong>Creator:</strong> Bob Kane & Bill Finger</li>
+                        <li> The archetypal super-powered alien from Krypton who uses his powers for truth, justice and the American way; his dual identity as mild-mannered reporter Clark Kent anchors his humanity.</li>
+                    </ul>
+                    <a href="buy.html?character=batman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/Superman.png" class="card-img-top" alt="Superman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Superman</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Metropolis City</li>
+                        <li><strong>First comic:</strong> Action Comics #1</li>
+                        <li><strong>Creator:</strong> Jerry Siegel & Joe Shuster</li>
+                        <li> A wealthy playboy whose parents’ murder drives him to become a masked vigilante, using detective skills and gadgets rather than super-powers to fight crime at night.</li>
+                    </ul>
+                    <a href="buy.html?character=superman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/wonderwoman.png" class="card-img-top" alt="Wonder Woman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Wonder Woman</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Themyscira</li>
+                        <li><strong>First comic:</strong> All Star Comics #8</li>
+                        <li><strong>Creator:</strong> William Moulton Marston</li>
+                        <li> Amazonian princess gifted with super-strength, flight and warrior training; leaves her island home to bring peace, justice and compassion to the wider world.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/flash.png" class="card-img-top" alt="Flash illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Flash</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Central City</li>
+                        <li><strong>First comic:</strong> Showcase #4</li>
+                        <li><strong>Creator:</strong> Robert Kanigher & Carmine Infantino</li>
+                        <li> Forensic scientist Barry Allen gains super-speed via a lab accident; as the “Scarlet Speedster” he uses his velocity based powers to fight crime and protect his city.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/greenL.png" class="card-img-top" alt="Green Lantern illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Green Lantern</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Coast City</li>
+                        <li><strong>First comic:</strong> Showcase #22</li>
+                        <li><strong>Creator:</strong> John Broome</li>
+                        <li> Test-pilot Hal Jordan is chosen to wear an alien power-ring, gaining the ability to create anything he imagines and must use that power responsibly as a member of an intergalactic police corps.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/aquaman.png" class="card-img-top" alt="Aquaman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Aquaman</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Atlantis</li>
+                        <li><strong>First comic:</strong> More Fun Comics #73</li>
+                        <li><strong>Creator:</strong> Paul Norian & Mort Weisinger</li>
+                        <li> The king of Atlantis, Aquaman has aquatic powers, telepathy with sea life and royal responsibilities beneath the waves bridging the oceans and the surface world.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/hawkgirl.png" class="card-img-top" alt="Hawkgirl illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Hawkgirl</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Earth</li>
+                        <li><strong>First comic:</strong> Flash Comics #1</li>
+                        <li><strong>Creator:</strong> Writer Gardner Fox</li>
+                        <li> Hawkgirl is a winged heroine whose origin involves ancient reincarnation (often tied to Egyptian myth, Nth metal, and the pairing with Hawkman). She flies using wings, wields archaic weapons, and bridges heroic and mythic elements.</li>
+                    </ul>
+                    <a href="buy.html?character=hawkgirl" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/greenA.png" class="card-img-top" alt="Green Lantern illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Green Arrow</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Star City</li>
+                        <li><strong>First comic:</strong> More Fun Comics #73</li>
+                        <li><strong>Creator:</strong> </li>
+                        <li> Green Arrow (Oliver Queen) is a billionaire playboy turned vigilante archer, using trick arrows, archery skill, and acrobatics rather than super-powers. Over time the character evolved from a Golden Age hero into one with strong social justice themes.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/martian.png" class="card-img-top" alt="Martian Manhunter illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Martian Manhunter</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Mars</li>
+                        <li><strong>First comic:</strong> Detective Comics #225</li>
+                        <li><strong>Creator:</strong> Alien from Mars stranded on Earth, Martian Manhunter has shape-shifting, telepathy and invisibility. He uses his powers and detective skills to protect humanity, often from the shadows.</li>
+                        <li> </li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-fixed bg-dark text-light py-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div class="small">Copyright © Adrian Hernandez, 11/25/2025</div>
+        <div>
+            <a href="terms.html" class="link-light me-3">Terms of Service</a>
+            <a href="privacy.html" class="link-light">Privacy Statement</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
+

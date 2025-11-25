@@ -1,0 +1,228 @@
+<!-- DEVELOPER: Adrian Hernandez, IS117-001, Fall 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiverse Comics — Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="site.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<div class="modal fade" id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-dark">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="characterModalLabel">Character Info</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Origin:</strong> <span id="charOrigin">Gotham City</span></p>
+                <p><strong>First Comic:</strong> <span id="charComic">Detective Comics #27</span></p>
+                <p><strong>Description:</strong> <span id="charDesc">A vigilante driven by justice and loss, Batman protects Gotham with intellect and fear.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function loadCharacterInfo(name, origin, comic, description) {
+        document.getElementById('characterModalLabel').textContent = name + ' Info';
+        document.getElementById('charOrigin').textContent = origin;
+        document.getElementById('charComic').textContent = comic;
+        document.getElementById('charDesc').textContent = description;
+    }
+</script>
+
+</body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="src/logo.png" alt="Multiverse Comics logo" width="40" height="40" class="me-2">
+                Multiverse Comics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="dc.html" id="dcMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">DC</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dcMenu">
+                            <li><a class="dropdown-item" href="dc.html#characters">DC characters</a></li>
+                            <li><a class="dropdown-item" href="dc.html#teams">DC teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="marvel.html" id="marvelMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marvel</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="marvelMenu">
+                            <li><a class="dropdown-item" href="marvel.html#characters">Marvel characters</a></li>
+                            <li><a class="dropdown-item" href="marvel.html#teams">Marvel teams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex gap-2">
+        </div>
+        <div class="w-50">
+            <input type="search" class="form-control form-control-sm" placeholder="Search characters" aria-label="Search characters">
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/ironman.png" class="card-img-top" alt="Iron Man illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Iron Man</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Long Island New York</li>
+                        <li><strong>First comic:</strong> Tales of Suspense #39</li>
+                        <li> Billionaire inventor Tony Stark dons powered armour to become Iron Man, using tech, wit and wealth to fight threats.</li>
+                    </ul>
+                    <a href="buy.html?character=ironman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/thor.png" class="card-img-top" alt="Superman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Thor</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Asgard</li>
+                        <li><strong>First comic:</strong> Journey into Mystery #83</li>
+                        <li> The Norse God of Thunder, wielding the enchanted hammer Mjölnir, bound to both mythic and Earth-based heroics.</li>
+                    </ul>
+                    <a href="buy.html?character=superman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/hulk.png" class="card-img-top" alt="Wonder Woman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Hulk</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> USA</li>
+                        <li><strong>First comic:</strong> The Incredible Hulk #1</li>
+                        <li> Scientist Bruce Banner transforms into the massive green Hulk when angered or stressed — raw power boxed with human vulnerability.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/antman.png" class="card-img-top" alt="Flash illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Ant-man</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> USA</li>
+                        <li><strong>First comic:</strong> Ant-Man in Tales to Astonish #35</li>
+                        <li> Hank Pym invents the “Pym Particles” enabling him to shrink (and later grow) and communicates with ants — a founding Avenger with lots of science flair.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/bpanther.png" class="card-img-top" alt="Green Lantern illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Black Panther</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Wakanda</li>
+                        <li><strong>First comic:</strong> Fantastic Four #52</li>
+                        <li> T’Challa is king and protector of Wakanda, a technologically advanced African nation. Combines royalty, science, and heroics.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/hawkeye.png" class="card-img-top" alt="Aquaman illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Hawkeye</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Waverly, Iowa</li>
+                        <li><strong>First comic:</strong> Tales of Suspense #57</li>
+                        <li> Master archer and marksman who trades superpowers for skill sharp arrows, sharp wit, and a human touch among gods and monsters.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/Capa.png" class="card-img-top" alt="Hawkgirl illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Captain America</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Brooklyn, New York</li>
+                        <li><strong>First comic:</strong> Captain America Comics #1</li>
+                        <li> The super-soldier embodiment of American ideals; Steve Rogers fights tyranny in body and spirit, leading by example.</li>
+                    </ul>
+                    <a href="buy.html?character=hawkgirl" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/Switch.png" class="card-img-top" alt="Green Lantern illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Scarlet Witch</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> Romania</li>
+                        <li><strong>First comic:</strong> X-Men #4</li>
+                        <li> Wanda possesses chaotic reality-warping powers and magic; a hero whose path repeatedly grapples with great power and emotional weight.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="src/vision.png" class="card-img-top" alt="Martian Manhunter illustration portrait">
+                <div class="card-body">
+                    <h5 class="card-title">Vision</h5>
+                    <ul class="mb-2">
+                        <li><strong>Origin:</strong> USA Avengers tower</li>
+                        <li><strong>First comic:</strong> The Avengers #57</li>
+                        <li> The synthezoid hero with a mind-machine body, striving for humanity and heroism — built for war, seeking purpose.</li>
+                    </ul>
+                    <a href="buy.html?character=wonderwoman" class="stretched-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-fixed bg-dark text-light py-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div class="small">Copyright © Adrian Hernandez, 11/25/2025</div>
+        <div>
+            <a href="terms.html" class="link-light me-3">Terms of Service</a>
+            <a href="privacy.html" class="link-light">Privacy Statement</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
+

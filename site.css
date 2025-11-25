@@ -1,0 +1,73 @@
+/* Adrian Hernandez, IS117-001, Fall 2025 */
+:root {
+    --brand-primary: #0d6efd;
+    --brand-dark: #121212;
+    --brand-light: #2e7bc8;
+    --text-dark: #212529;
+}
+
+body {
+    font-size: 1em; /* >= .75em as required for readability */
+    color: var(--text-dark);
+    background: #284a8a;
+}
+
+.hero {
+    background: url('src/logo.png') center/cover no-repeat;
+}
+
+.page-header {
+    background: var(--brand-light);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 220px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Spacing and borders */
+.section, .page-header, main section {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+/* Single media query: adapt for smaller mobile (<576px) */
+@media (max-width: 575.98px) {
+    .hero .display-4 { font-size: 1.75rem; }
+    .hero .lead { font-size: 1rem; }
+    .navbar-brand img { width: 28px; height: 28px; }
+    .card-img-top { height: 160px; }
+    .w-50 { width: 100% !important; } /* search bar full-width on mobile */
+    .float-md-start { float: none !important; }
+    .me-md-4 { margin-right: 0 !important; }
+}
+
+.modal-content {
+    transition: transform 0.3s ease-in-out;
+}
+.modal.fade .modal-dialog {
+    transform: scale(0.95);
+}
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* higher than navbar */
+}
+body {
+    padding-bottom: 70px; /* prevent content from hiding behind footer */
+}
+
